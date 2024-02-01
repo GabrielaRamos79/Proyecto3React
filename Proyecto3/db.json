@@ -1,20 +1,12 @@
 {
   "users": [
     {
-      "id": "1",
-      "nombre": " Gaby",
+      "id": 1706809828530,
+      "nombre": "Gabriela",
       "apellido1": "Ramos",
       "apellido2": "Liñan",
-      "email": "gaby@gmail.com",
-      "telefono": "654321987"
-    },
-    {
-      "id": 1706807472990,
-      "nombre": "Lolo",
-      "apellido1": "Cortes",
-      "apellido2": "Maya",
-      "email": "lolo@eldelbombo.com",
-      "telefono": "369852147"
+      "email": "gaby@me.com",
+      "telefono": "622141855622"
     }
   ]
 }

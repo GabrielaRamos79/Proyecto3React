@@ -39,6 +39,10 @@ export const UserService = {
         await apiClient.post("/users", newUser)
         // una vez enviada la petición, llamamos a la función getAllUsers() para actual
         
+    },
+
+    async deleteUser(id) {
+        await apiClient.delete(`/users/${id}`);
     }
     
 

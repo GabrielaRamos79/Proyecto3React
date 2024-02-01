@@ -21,10 +21,14 @@ import Imagen1 from "../img/logo.png";
     // setUser({...user, [e.target.name]:e.target.value})
   };
 
-  const handleRemoveUser = (id) => {
-    const updateAlumnos = alumnos.filter((alumno) => alumno.id !== id);
-    setAlumnos(updateAlumnos);
-  };
+  const handleRemoveUser = async (id) => {
+    await UserService.deleteUser(id);
+    setAlumnos((prevAlumnos) => {
+      const updateAlumnos = prevAlumnos.filter((alumno) => alumno.id !== id);
+      return updateAlumnos;
+  });
+  getdata();
+};
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
