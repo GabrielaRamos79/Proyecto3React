@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./proyecto3.css";
 import { UserService } from "./userService";
+import { users } from "../../db.json";
+//import axios from "axios";
 import Imagen1 from "../img/logo.png";
 
 const FormularioAlumnos = ({ onAgregarAlumno }) => {
@@ -117,7 +119,7 @@ const FormularioAlumnos = ({ onAgregarAlumno }) => {
             />
           </label>
 
-          <button type="button">Añadir Alumno</button>
+          <button className="botonagregar" type="button" onClick={handleSubmit}>Añadir Alumno</button>
         </form>
 
         
