@@ -1,124 +1,144 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: cornflowerblue;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
 }
 
 .logo {
-    display: block;
-    width: 100px;
-    height:  auto;
-    margin-right: 10px;
-    border-radius: 50%;
+  display: block;
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
-.titleNavbar{
-    font-size: 80px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bolder;
-    color:black;
-    margin: auto;
+.titleNavbar {
+  font-size: 80px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  color: black;
+  margin: auto;
 }
 
 .buttonNavbar {
-    margin-left: 10px;
-    padding: 8px 12px;
-    background-color: rgb(252, 239, 124);
-    color:black;
-    border: none;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: rgb(252, 239, 124);
+  color: black;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .buttonNavbar:hover {
-    background-color: pink;
-    color:rgb(238, 240, 236);
-    font-style: italic;
+  background-color: pink;
+  color: rgb(238, 240, 236);
+  font-style: italic;
 }
 
-.tabla-container{
-    max-width: 900px;
-    margin: auto;
-    margin-top: 0;
-    text-align: center;
+.tabla-container {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 0;
+  text-align: center;
 }
 
-
-
-.formulario{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    max-width: 700px;
-    margin:auto;
+.formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
 }
 
-.formalumnos{
-    display: flex;
-    flex-direction: column;
-    max-width: 450px;
-    height: 425px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background-color: pink;
-    border: 2px solid black;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    text-align:  left;
+.formalumnos {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  height: 425px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: pink;
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  text-align: left;
 }
 
-.botonagregar{
-    color: black;
-    font-size: 1em;
-    font-weight: bolder;
-    float: right;
-    transition: all .2s ease-in-out;
-    background-color: rgb(115, 158, 238);
-    border: none;
-    outline:auto;
-    cursor:pointer;
-    border-radius: 10px;
-    width: fit-content;
-    box-shadow:15px;
+.botonagregar {
+  color: black;
+  font-size: 1em;
+  font-weight: bolder;
+  float: right;
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(115, 158, 238);
+  border: none;
+  outline: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 15px;
 }
 
 .botonagregar:hover {
-    transform: scale(1.05);
-    color: blueviolet;
-    background-color: yellow;
+  transform: scale(1.05);
+  color: blueviolet;
+  background-color: yellow;
 }
 
-.listadoAlumnos{
-    list-style:none;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items:center;
-    justify-content:space-around;
-    max-height: 400px;
-    width:100%;
-    overflow-y: scroll;
-    outline: auto;
-    background-color: rgb(252, 239, 124);
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-left: 10px;
+.listadoAlumnos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  max-height: 400px;
+  width: 100%;
+  border-collapse: collapse;
+  overflow-y: scroll;
+  outline: auto;
+  background-color: rgb(252, 239, 124);
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-left: 10px;
 }
 
 .listadoAlumnos th,
-.listadoAlumnos td{
-    min-width: 100px;
-    word-wrap: break-word;
-    text-align:justify;
-    padding: 5px;
+.listadoAlumnos td {
+  min-width: 100px;
+  word-wrap: break-word;
+  text-align: justify;
+  padding: 5px;
 }
 
+@media (max-width: 768px) {
+  .listadoAlumnos th,
+  .listadoAlumnos td {
+    display:block;
+    width: 100%;
+  };
+}
+
+.botoneliminar {
+  border-radius: 10px;
+  background-color: rgb(115, 158, 238);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.botoneliminar:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: rgb(76, 110, 178);
+  color: palevioletred;
+}

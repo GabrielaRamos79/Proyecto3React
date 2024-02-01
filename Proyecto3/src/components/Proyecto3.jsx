@@ -21,6 +21,11 @@ import Imagen1 from "../img/logo.png";
     // setUser({...user, [e.target.name]:e.target.value})
   };
 
+  const handleRemoveUser = (id) => {
+    const updateAlumnos = alumnos.filter((alumno) => alumno.id !== id);
+    setAlumnos(updateAlumnos);
+  };
+
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   //   onAgregarAlumno(alumno);
@@ -42,7 +47,16 @@ import Imagen1 from "../img/logo.png";
 
   //UserService.getAllUsers();
   async function handlerAddUserToList() {
-    await UserService.submitUser(alumno);
+    const newAlumno = {...alumno, id: Date.now() };
+    await UserService.submitUser(newAlumno);
+    setAlumno({
+      nombre: "",
+      apellido1: "",
+      apellido2:"",
+      email: "",
+      telefono: ""
+    });
+  }
     // setAlumnos =({
     //   nombre: alumno.nombre,
     //   apellido1: alumno.apellido1,
@@ -52,7 +66,7 @@ import Imagen1 from "../img/logo.png";
     // });
   
     //UserService.getAllUsers();
-  }
+  
   /*function Proyecto3React() {*/
 
   return (
@@ -142,6 +156,9 @@ import Imagen1 from "../img/logo.png";
                 <td>{alumno.apellido2}</td>
                 <td>{alumno.email}</td>
                 <td>{alumno.telefono}</td>
+                <td>
+                <button className="botoneliminar" onClick={() => handleRemoveUser(alumno.id)}>Eliminar</button>
+                </td>
               </tr>
             ))
             }
