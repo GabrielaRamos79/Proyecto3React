@@ -2,11 +2,13 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    margin-bottom: 20px;
     background-color: cornflowerblue;
     border-radius: 10px;
 }
 
 .logo {
+    display: block;
     width: 100px;
     height:  auto;
     margin-right: 10px;
@@ -14,8 +16,9 @@
 }
 
 .titleNavbar{
-    font-size: 40px;
+    font-size: 80px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
     color:black;
     margin: auto;
 }
@@ -37,10 +40,19 @@
     font-style: italic;
 }
 
+.tabla-container{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+
 .formulario{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: left;
     max-width: 700px;
@@ -50,8 +62,8 @@
 .formalumnos{
     display: flex;
     flex-direction: column;
-    max-width: 350px;
-    height: 400px;
+    max-width: 450px;
+    height: 425px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
@@ -59,6 +71,9 @@
     background-color: pink;
     border: 2px solid black;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-align:  left;
 }
 
 .botonagregar{
@@ -74,6 +89,36 @@
     border-radius: 10px;
     width: fit-content;
     box-shadow:15px;
-    
-
 }
+
+.botonagregar:hover {
+    transform: scale(1.05);
+    color: blueviolet;
+    background-color: yellow;
+}
+
+.listadoAlumnos{
+    list-style:none;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-around;
+    max-height: 400px;
+    width:100%;
+    overflow-y: scroll;
+    outline: auto;
+    background-color: rgb(252, 239, 124);
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+}
+
+.listadoAlumnos th,
+.listadoAlumnos td{
+    min-width: 100px;
+    word-wrap: break-word;
+    text-align:justify;
+    padding: 5px;
+}
+

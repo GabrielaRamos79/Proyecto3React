@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./proyecto3.css";
 import { UserService } from "./userService";
-import { users } from "../../db.json";
-//import axios from "axios";
 import Imagen1 from "../img/logo.png";
 
-const FormularioAlumnos = ({ onAgregarAlumno }) => {
+// const FormularioAlumnos = ({ onAgregarAlumno }) => {
+  const FormularioAlumnos = () => {
   const [alumnos, setAlumnos] = useState([]);
 
   const [alumno, setAlumno] = useState({
@@ -19,18 +18,19 @@ const FormularioAlumnos = ({ onAgregarAlumno }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setAlumno((prevAlumno) => ({ ...prevAlumno, [name]: value }));
+    // setUser({...user, [e.target.name]:e.target.value})
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onAgregarAlumno(alumno);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   onAgregarAlumno(alumno);
+  // };
 
-  const agregarAlumno = (nuevoAlumno) => {
-    setAlumnos([...alumnos, nuevoAlumno]);
-  };
+  // const agregarAlumno = (nuevoAlumno) => {
+  //   setAlumnos([...alumnos, nuevoAlumno]);
+  // };
 
-  console.log(FormularioAlumnos);
+  // console.log(FormularioAlumnos);
 
   async function getdata (){
     let usuarios = await UserService.getAllUsers ();
@@ -40,19 +40,19 @@ const FormularioAlumnos = ({ onAgregarAlumno }) => {
 
   getdata();
 
-  UserService.getAllUsers();
-  /*async function nuevoAlumno() {
-    let nuevoAlumno = await UserService.submitUser();
-    nuevoAlumno = {
-      nombre: "",
-      apellido1: "",
-      apellido2: "",
-      email: "",
-      telefono: ""
-    };
+  //UserService.getAllUsers();
+  async function handlerAddUserToList() {
+    await UserService.submitUser(alumno);
+    // setAlumnos =({
+    //   nombre: alumno.nombre,
+    //   apellido1: alumno.apellido1,
+    //   apellido2: alumno.apellido2,
+    //   email: alumno.email,
+    //   telefono: alumno.telefono
+    // });
   
-    UserService.getAllUsers();
-  }*/
+    //UserService.getAllUsers();
+  }
   /*function Proyecto3React() {*/
 
   return (
@@ -119,11 +119,11 @@ const FormularioAlumnos = ({ onAgregarAlumno }) => {
             />
           </label>
 
-          <button className="botonagregar" type="button" onClick={handleSubmit}>Añadir Alumno</button>
+          <button className="botonagregar" type="button" onClick={handlerAddUserToList}>Añadir Alumno</button>
         </form>
 
-        
-        <table>
+        <div className="tabla-container">
+        <table className="listadoAlumnos">
           <thead>
             <tr>
               <th>Nombre</th>
@@ -140,12 +140,14 @@ const FormularioAlumnos = ({ onAgregarAlumno }) => {
                 <td>{alumno.nombre}</td>
                 <td>{alumno.apellido1}</td>
                 <td>{alumno.apellido2}</td>
+                <td>{alumno.email}</td>
                 <td>{alumno.telefono}</td>
               </tr>
             ))
             }
           </tbody>
         </table>
+        </div>
       </div>
     </>
   );

@@ -5,33 +5,40 @@
       "nombre": " Gaby",
       "apellido1": "Miau",
       "apellido2": "Liñan",
-      "telefono": 654321,
-      "email": "gaby@gmail.com"
+      "email": "gaby@gmail.com",
+      "telefono": "654321"
     },
     {
       "id": "2",
       "nombre": " Maria",
       "apellido1": "Nadales",
       "apellido2": "Miau",
-      "telefono": 12345,
-      "email": "maria@gmail.com"
+      "email": "maria@gmail.com",
+      "telefono": "12345"
     },
     {
       "id": "3",
       "nombre": " Sandra",
       "apellido1": "Luque",
       "apellido2": "Liñan",
-      "telefono": 67889,
-      "email": "sandy@gmail.com"
+      "email": "sandy@gmail.com",
+      "telefono": "67889"
     },
     {
-      "id": "d271"
+      "id": "0c50",
+      "nombre": "Lola",
+      "apellido1": "Cortes",
+      "apellido2": "Ramos",
+      "email": "lola@lamona.com",
+      "telefono": "65555555"
     },
     {
-      "id": "b5c2"
-    },
-    {
-      "id": "a764"
+      "id": "ac6f",
+      "nombre": "Gabo",
+      "apellido1": "Cortes",
+      "apellido2": "Ramos",
+      "email": "gaboto@eldelamoto.com",
+      "telefono": "369852147"
     }
   ]
 }
