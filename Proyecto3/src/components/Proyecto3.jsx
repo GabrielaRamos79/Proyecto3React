@@ -4,7 +4,7 @@ import { UserService } from "./userService";
 import Imagen1 from "../img/logo.png";
 
 // const FormularioAlumnos = ({ onAgregarAlumno }) => {
-  const FormularioAlumnos = () => {
+const FormularioAlumnos = () => {
   const [alumnos, setAlumnos] = useState([]);
 
   const [alumno, setAlumno] = useState({
@@ -26,9 +26,9 @@ import Imagen1 from "../img/logo.png";
     setAlumnos((prevAlumnos) => {
       const updateAlumnos = prevAlumnos.filter((alumno) => alumno.id !== id);
       return updateAlumnos;
-  });
-  getdata();
-};
+    });
+    getdata();
+  };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -41,36 +41,35 @@ import Imagen1 from "../img/logo.png";
 
   // console.log(FormularioAlumnos);
 
-  async function getdata (){
-    let usuarios = await UserService.getAllUsers ();
+  async function getdata() {
+    let usuarios = await UserService.getAllUsers();
     setAlumnos(usuarios);
-
   }
 
   getdata();
 
   //UserService.getAllUsers();
   async function handlerAddUserToList() {
-    const newAlumno = {...alumno, id: Date.now() };
+    const newAlumno = { ...alumno, id: Date.now() };
     await UserService.submitUser(newAlumno);
     setAlumno({
       nombre: "",
       apellido1: "",
-      apellido2:"",
+      apellido2: "",
       email: "",
-      telefono: ""
+      telefono: "",
     });
   }
-    // setAlumnos =({
-    //   nombre: alumno.nombre,
-    //   apellido1: alumno.apellido1,
-    //   apellido2: alumno.apellido2,
-    //   email: alumno.email,
-    //   telefono: alumno.telefono
-    // });
-  
-    //UserService.getAllUsers();
-  
+  // setAlumnos =({
+  //   nombre: alumno.nombre,
+  //   apellido1: alumno.apellido1,
+  //   apellido2: alumno.apellido2,
+  //   email: alumno.email,
+  //   telefono: alumno.telefono
+  // });
+
+  //UserService.getAllUsers();
+
   /*function Proyecto3React() {*/
 
   return (
@@ -137,37 +136,47 @@ import Imagen1 from "../img/logo.png";
             />
           </label>
 
-          <button className="botonagregar" type="button" onClick={handlerAddUserToList}>Añadir Alumno</button>
+          <button
+            className="botonagregar"
+            type="button"
+            onClick={handlerAddUserToList}
+          >
+            Añadir Alumno
+          </button>
         </form>
 
         <div className="tabla-container">
-        <table className="listadoAlumnos">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Apellido 1</th>
-              <th>Apellido 2</th>
-              <th>Email</th>
-              <th>Telefono</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {alumnos.map((alumno, index) => (
-              <tr key={index}>
-                <td>{alumno.nombre}</td>
-                <td>{alumno.apellido1}</td>
-                <td>{alumno.apellido2}</td>
-                <td>{alumno.email}</td>
-                <td>{alumno.telefono}</td>
-                <td>
-                <button className="botoneliminar" onClick={() => handleRemoveUser(alumno.id)}>Eliminar</button>
-                </td>
+          <table className="listadoAlumnos">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido 1</th>
+                <th>Apellido 2</th>
+                <th>Email</th>
+                <th>Telefono</th>
               </tr>
-            ))
-            }
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody>
+              {alumnos.map((alumno, index) => (
+                <tr key={index}>
+                  <td>{alumno.nombre}</td>
+                  <td>{alumno.apellido1}</td>
+                  <td>{alumno.apellido2}</td>
+                  <td>{alumno.email}</td>
+                  <td>{alumno.telefono}</td>
+                  <td>
+                    <button
+                      className="botoneliminar"
+                      onClick={() => handleRemoveUser(alumno.id)}
+                    >
+                      Eliminar
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </>
