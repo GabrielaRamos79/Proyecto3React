@@ -1,5 +1,28 @@
 {
   "users": [
-   
+    {
+      "id": 1706867564604,
+      "nombre": "Gabriela",
+      "apellido1": "Ramos",
+      "apellido2": "Liñan",
+      "email": "bagelola1@gmail.com",
+      "telefono": "6552729282"
+    },
+    {
+      "id": 1706868602097,
+      "nombre": "Gabriela",
+      "apellido1": "Ramos",
+      "apellido2": "Liñan",
+      "email": "bagelola1@gmail.com",
+      "telefono": "6552729282"
+    },
+    {
+      "id": 1706868630889,
+      "nombre": "Lolo",
+      "apellido1": "Cortes",
+      "apellido2": "Maya",
+      "email": "lolo@eldelbombo.com",
+      "telefono": "741258963"
+    }
   ]
 }
