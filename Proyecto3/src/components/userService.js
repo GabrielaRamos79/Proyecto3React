@@ -42,7 +42,11 @@ export const UserService = {
     },
 
     async deleteUser(id) {
-        await apiClient.delete(`/users/${id}`);
+        try {
+            await apiClient.delete(`/users/${id}`);
+        } catch (error) {
+            console.error('Hubo un error al eliminar el usuario: ', error);
+        }   
     }
     
 

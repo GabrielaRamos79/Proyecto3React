@@ -15,9 +15,18 @@
   border-radius: 50%;
 }
 
+.settings {
+  display: block;
+  float: right;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left:10px;
+}
+
 .titleNavbar {
   font-size: 80px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bolder;
   color: black;
   margin: auto;
@@ -38,6 +47,17 @@
   background-color: pink;
   color: rgb(238, 240, 236);
   font-style: italic;
+}
+
+.titleList {
+  list-style-type: none;
+  text-align: center;
+  margin-left: 283px;
+  background-color: cornflowerblue;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
 }
 
 .tabla-container {
@@ -68,7 +88,6 @@
   box-sizing: border-box;
   background-color: pink;
   border: 2px solid black;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
   text-align: left;
