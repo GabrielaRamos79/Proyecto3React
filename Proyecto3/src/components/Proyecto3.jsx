@@ -110,9 +110,14 @@ const FormularioAlumnos = () => {
 
       <label className="titleList">
         Nombre de la lista:
-        <input type="text" name="listaName" value={listaName} onChange={handleChange}/>
+        <input
+          type="text"
+          name="listaName"
+          value={listaName}
+          onChange={handleChange}
+        />
       </label>
-      
+
       <div className="formulario">
         <form className="formalumnos">
           <label>
