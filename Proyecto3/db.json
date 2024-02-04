@@ -1,20 +1,13 @@
 {
   "users": [
     {
-      "id": 1706985519479,
+      "id": 1707063946293,
       "nombre": "Gabriela",
       "apellido1": "Ramos",
       "apellido2": "Liñan",
-      "email": "Gaby@me.co",
-      "telefono": "622141855622"
-    },
-    {
-      "id": 1706985532661,
-      "nombre": "Lola",
-      "apellido1": "Ramos",
-      "apellido2": "Liñan",
-      "email": "lola@lamona.com",
-      "telefono": "65555555"
+      "email": "gaby@me.com",
+      "telefono": "6552729282",
+      "listaName": "y"
     }
   ]
 }
